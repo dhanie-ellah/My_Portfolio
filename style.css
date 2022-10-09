@@ -2,12 +2,14 @@
      --blue-1: #003366;
      --blue-2: #003399;
      --blue-3: #0033ff;
-}
+     --primary-color: #B1CBF5;
+     --dark: #181f2a;
+     }
 ::-webkit-scrollbar{
      width: 5px;
 }
 ::-webkit-scrollbar-thumb{
-     background-color: #0033ff;
+     background-color: var(--primary-color);
 }
 ::-webkit-scrollbar-track{
      background-color: white;
@@ -22,13 +24,17 @@ a,button{
      cursor: pointer;
 }
 body{
-     background-color: black;
+     background-color: var(--dark);
 }
 .mobile{
      display: none;
 }
 .desktop{
      display: flex;
+     width: 100%;
+     min-height: 100vh;
+     /* background: rgba(0, 0, 0, 0.25) url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-54587.jpg?w=740&t=st=1665221064~exp=1665221664~hmac=d747bf575dd270c18f298415b47e235c6ad25c8b9ffed3b49492a34c1455eef5) no-repeat center;
+     background-size: cover; */
 }
 .desktop .side-nav{
      position: relative;
@@ -39,8 +45,8 @@ body{
      top: 0;
      height: 100vh;
      width: 25%;
-     background-color: rgb(255, 255, 255, 0.5);
-     backdrop-filter: blur(50);
+     background-color: rgb(255, 255, 255, 0.10);
+     backdrop-filter: blur(5px);
      padding: 25px;
 }
 .desktop .side-nav aside .image-wrapper{
@@ -50,13 +56,21 @@ body{
 .desktop .side-nav aside .image-wrapper img{
      width: 100%;
 }
-.desktop nav a {
+.desktop aside nav a {
      display: flex;
      align-items: center;
      margin-bottom: 10px;
      gap: 10px;
      text-decoration: none;
      color: white;
+}
+.desktop aside nav a p{
+     transition: ease-in-out 0.5s;
+}
+.desktop aside nav a:hover p{
+     color: var(--primary-color);
+     font-weight: 900;
+     font-size: 16px;
 }
 .desktop aside .contact-links .tel-wrapper,
 .desktop aside .contact-links .email-wrapper {
@@ -109,82 +123,87 @@ body{
      padding-left: 25%;
      color: white;
 }
+.desktop .home .home-wrapper{
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
 .desktop .home-content{
      display: flex;
      align-items: center;
-     gap: 25px;
+     /* gap: 25px; */
      padding: 25px;
      padding-top: 50px;
      margin-bottom: 100px;
 }
-
 .desktop .home-text-wrapper {
-     width: 50%;
+     width: 60%;
 }
-
 .desktop .home-text-wrapper .home-text .hello {
      font-weight: 700;
 }
-
 .desktop .home-text-wrapper .home-text h2 {
-     font-size: 40px;
+     font-size: 45px;
      font-weight: 900;
      color: var(--primary-color);
      font-family: 'poppins';
 }
-
 .desktop .home-text-wrapper .home-text .description {
      color: var(--gray);
      margin-bottom: 25px;
 }
-
 .desktop .home-text-wrapper .home-text a {
      text-decoration: none;
      background-color: var(--primary-color);
      color: black;
-     padding: 10px 20px;
+     padding: 10px 12px;
      border-radius: 8px;
+     font-size: 12px;
+     font-weight: 600;
+     transition: 0.5s;
 }
-
+.desktop .home-text-wrapper .home-text a:hover{
+     padding: 12px 15px;
+}
 .desktop .home-image-wrapper {
-     width: 50%;
-     padding: 25px;
+     width: 40%;
 }
-
 .desktop .home-image-wrapper img {
      width: 100%;
 }
-
-.desktop .home .about-content{
+.desktop .home .flex{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
      margin-bottom: 100px;
 }
-
+.desktop .home .about-content{
+     width: 70%;
+}
 .desktop .home .about-content .about-header {
      display: flex;
      gap: 10px;
      align-items: center;
      justify-content: center;
+     margin-bottom: 15px;
 }
-
 .desktop .home .about-content .about-header i {
-     font-size: 30px;
+     font-size: 20px;
      color: var(--primary-color);
 }
-
 .desktop .home .about-content .about-header h1 {
-     font-size: 35px;
+     font-size: 25px;
      color: var(--primary-color);
 }
-
 .desktop .home .about-content .about-img-wrapper {
      width: 20%;
      margin: auto;
 }
-
 .desktop .home .about-content .about-img-wrapper img {
      width: 100%;
 }
-
 .desktop .home .about-content .about-text-wrapper {
      width: 90%;
      margin: auto;
@@ -192,17 +211,24 @@ body{
 
 /* SKILLS/TECHNOLOGIES */
 .desktop .home .skillset{
-     padding: 25px;
+     width: 30%;
 }
-.desktop .home .skillset h1{
+.desktop .home .skillset h4{
      text-align: center;
-     margin-bottom: 20px;
-     font-size: xx-large;
+     margin: 20px;
+     text-transform: uppercase;
 }
 .desktop .home .skillset .skills{
      display: flex;
-     gap: 25px;
+     gap: 10px;
      justify-content: center;
+}
+.desktop .home .skillset .skills i{
+     font-size: 40px;
+     color: var(--primary-color);
+}
+.desktop .home .skillset .skills i:hover{
+     color: white;
 }
 
 /* PROJECTS */
@@ -232,18 +258,52 @@ body{
 
 .desktop .project-details {
      display: flex;
-     width: 75%;
+     gap: 25px;
+     width: 90%;
      margin: auto;
      flex-wrap: wrap;
      justify-content: space-between;
 }
 
 .desktop .project-details .projects-outlined {
-     margin-bottom: 50px;
-     width: 48%;
+     margin-bottom: 25px;
+     width: 250px;
+     height: 250px;
+     border-radius: 10px;
+     overflow: hidden;
 }
-
-.desktop .project-details .projects-outlined a {
+.desktop .project-details .fylo {
+     background: url(./images/fylo\ dark\ theme\ landing\ page.jpg) no-repeat center;
+     background-size: cover;
+}
+.desktop .project-details .harvoxx {
+     background: url(./images/harvoxx.png) no-repeat center;
+     background-size: cover;
+}
+.desktop .project-details .crappo {
+     background: url(./images/CRAPPO.png) no-repeat center;
+     background-size: cover;
+}
+.desktop .project-details .rating {
+     background: url(./images/rating-component.png) no-repeat center;
+     background-size: cover;
+}
+.desktop .project-details .form {
+     background: url(./images/form.png) no-repeat center;
+     background-size: cover;
+}
+.desktop .project-details .church {
+     background: url(./images/church.png) no-repeat center;
+     background-size: cover;
+}
+/* .desktop .project-details .projects-outlined .text-container{
+     display: none;
+     transition: ease-in-out 0.3s;
+}
+.desktop .project-details .projects-outlined:hover .text-container{
+     display: block;
+} */
+/* .desktop .project-details .projects-outlined a {
      text-decoration: none;
      width: 100%;
 }
@@ -271,34 +331,63 @@ body{
      to {
           transform: scale(1.25);
      }
-}
+} */
 
-.desktop .project-details .text-container {
+.desktop .project-details .projects-outlined .text-container {
+     display: none;
      width: 100%;
-     height: fit-content;
-     position: relative;
-     margin: 0;
-     background-color: white;
-     margin-top: -75px;
+     height: 100%;
+     background-color: rgb(0, 0, 0, 0.5);
+     backdrop-filter: blur(5px);
+     color: white;
      padding: 25px 20px;
+     align-items: center;
+     justify-content: center;
+     transition: ease-in-out 0.4s;
 }
-
+.desktop .project-details .projects-outlined:hover .text-container{
+     display: flex;
+}
 .desktop .project-details .text-container h1 {
-     color: black;
+     color: var(--primary-color);
      text-align: center;
+     margin-bottom: 15px;
+     font-size: 18px;
+     text-transform: uppercase;
 }
 
 .desktop .project-details .text-container p {
-     color: black;
+     /* color: black; */
+     font-size: 12px;
+     margin-bottom: 25px;
 }
-
-.desktop .project-content a {
+.desktop .project-details .text-container p a{
+     color: var(--primary-color);
+}
+.desktop .project-details .text-container .links{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.desktop .project-details .text-container a{
+     text-decoration: none;
+     color: white;
+}
+.desktop .project-details .text-container a:hover i{
+     color: var(--primary-color);
+}
+.desktop .project-details .text-container a i{
+     font-size: 20px;
+     /* color: black; */
+}
+.desktop .project-details > a {
      text-decoration: none;
      cursor: pointer;
+     color: white;
      font-size: 12px;
 }
 
-.desktop .project-content a:hover {
+.desktop .project-details > a:hover {
      color: var(--primary-color);
 }
 
@@ -316,7 +405,7 @@ body{
      gap: 10px;
      align-items: center;
      justify-content: center;
-     margin-bottom: 50px;
+     margin-bottom: 25px;
 }
 
 .desktop .contact .contact-header i {
@@ -331,12 +420,12 @@ body{
 
 .desktop .contact .contact-info {
      display: flex;
+     align-items: center;
      margin-bottom: 25px;
 }
 
 .desktop .contact .contact-info .contact-links {
      width: 50%;
-     margin: auto;
      padding: 25px;
 }
 
@@ -369,12 +458,8 @@ body{
      gap: 10px;
 }
 
-.desktop .contact-links .social-media-icons a{
-     width: fit-content;
-}
-
 .desktop .contact-links .social-media-icons img{
-     width: 50%;
+     width: 45px;
 }
 
 .desktop .contact .contact-info form {
@@ -387,18 +472,31 @@ body{
      width: 100%;
      background-color: transparent;
      border: 1px solid white;
-     border-radius: 15px;
+     border-radius: 10px;
      padding: 12px;
      margin-bottom: 15px;
+     outline: none;
+     resize: none;
 }
-
+.desktop form input::placeholder,
+.desktop form textarea::placeholder{
+     color: white;
+}
+.desktop form input:focus,
+.desktop form textarea:focus{
+     caret-color: white;
+     color: white;
+}
 .desktop form input[type="submit"] {
      width: 100px;
      background-color: white;
      color: black;
      cursor: pointer;
 }
-
+.desktop form input[type="submit"]:hover{
+     background-color: var(--primary-color);
+     color: white;
+}
 .desktop .contact .contact-content p {
      text-align: center;
      font-size: 12px;
@@ -428,6 +526,10 @@ body{
      .desktop nav a p {
           font-size: 11px;
      }
+     .desktop .home .about-content,
+     .desktop .home .skillset{
+          width: 50%;
+     }
      .desktop .contact .contact-info {
           flex-direction: column;
           gap: 0;
@@ -441,6 +543,10 @@ body{
      }
      .desktop .contact-links .social-media-icons img {
           width: 50%;
+     }
+     .desktop .project-details .projects-outlined {
+          width: 150px;
+          height: 150px;
      }
      .desktop .contact .contact-info form{
           width: 100%;
@@ -461,8 +567,8 @@ body{
      .mobile nav{
           position: fixed;
           bottom: 0;
-          background-color: rgba(225, 225, 225, 0.25);
-          backdrop-filter: blur(100px);
+          background-color: rgba(225, 225, 225, 0.15);
+          backdrop-filter: blur(5px);
           width: 100%;
           padding: 25px;
           display: flex;
@@ -476,7 +582,7 @@ body{
           gap: 5px;
           text-decoration: none;
           color: white;
-          font-size: 12px;
+          font-size: 15px;
      }
 
      /* HOME */
@@ -545,77 +651,148 @@ body{
           margin: auto;
      }
 
-     /* SKILLS/TECHNOLOGIES */
-     .mobile .skillset{
-          padding: 25px;
-          padding-bottom: 25%;
-     }
-     .mobile .skillset h1{
-          text-align: center;
-          margin-bottom: 15px;
-          color: white;
-     }
-     .mobile .skillset .images{
-          display: flex;
-          justify-content: space-between;
-     }
-     .mobile .skillset .technologies,
-     .mobile .skillset .tools{
-          display: flex;
-          gap: 25px;
-     }
-
-     /* PROJECTS */
-     .project{
-          color: white;
-          padding: 25px;
-          padding-bottom: 25%;
-     }
-     .project .project-header {
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 50px;
-     }
-     .project .project-header i {
-          font-size: 30px;
-          color: var(--primary-color);
-     }
-     .project .project-header h1 {
-          font-size: 35px;
-          color: var(--primary-color);
-     }
-     .project-details {
-          width: 90%;
-          margin: auto;
-     }
-     .project-details .projects-outlined {
-          margin-bottom: 50px;
-     }
-     .project-details .projects-outlined a {
-          color: white;
-          text-decoration: none;
-          width: 100%;
-     }
+          /* SKILLS/TECHNOLOGIES */
+          .mobile .skillset h4 {
+               font-size: 15px;
+               color: white;
+          }
      
-     .project-details .image-container {
-          width: 100%;
-          margin: 0;
-          overflow: hidden;
-     }
-     .project-details .image-container img {
-          width: 100%;
-     }
-     .project-details .projects-outlined:hover .image-container img {
-          /* transform: scale(1.25); */
-          animation: scale 1s ease-in-out;
-          animation-fill-mode: forwards;
-     }
-     .project-details > a{
-          color: white;
-          text-decoration: none;
-     }
+          .mobile .skillset h4 {
+               text-align: center;
+               margin: 20px;
+               text-transform: uppercase;
+          }
+     
+          .mobile .skillset .skills {
+               display: flex;
+               gap: 10px;
+               justify-content: center;
+          }
+     
+          .mobile .skillset .skills i {
+               font-size: 40px;
+               color: var(--primary-color);
+          }
+     
+          .mobile .skillset .skills i:hover {
+               color: white;
+          }
+
+          /* PROJECTS */
+          .mobile .project {
+               color: white;
+               padding: 25px;
+               padding-bottom: 25%;
+          }
+
+          .mobile .project-details {
+               /* width: 95%; */
+               margin: auto;
+          }
+     
+          .mobile .project-details .projects-outlined {
+               margin-bottom: 45px;
+               /* width: 350px; */
+               height: 250px;
+               border-radius: 10px;
+               overflow: hidden;
+          }
+     
+          .mobile .project-details .fylo {
+               background: url(./images/fylo\ dark\ theme\ landing\ page.jpg) no-repeat center;
+               background-size: cover;
+          }
+     
+          .mobile .project-details .harvoxx {
+               background: url(./images/harvoxx.png) no-repeat center;
+               background-size: cover;
+          }
+     
+          .mobile .project-details .crappo {
+               background: url(./images/CRAPPO.png) no-repeat center;
+               background-size: cover;
+          }
+     
+          .mobile .project-details .rating {
+               background: url(./images/rating-component.png) no-repeat center;
+               background-size: cover;
+          }
+     
+          .mobile .project-details .form {
+               background: url(./images/form.png) no-repeat center;
+               background-size: cover;
+          }
+     
+          .mobile .project-details .church {
+               background: url(./images/church.png) no-repeat center;
+               background-size: cover;
+          }
+     
+          .mobile .project-details .projects-outlined .text-container {
+               display: none;
+               width: 100%;
+               height: 100%;
+               background-color: rgb(0, 0, 0, 0.5);
+               backdrop-filter: blur(5px);
+               color: white;
+               padding: 25px 20px;
+               align-items: center;
+               justify-content: center;
+               transition: ease-in-out 0.4s;
+          }
+     
+          .mobile .project-details .projects-outlined:hover .text-container {
+               display: flex;
+          }
+     
+          .mobile .project-details .text-container h1 {
+               color: var(--primary-color);
+               text-align: center;
+               margin-bottom: 15px;
+               font-size: 18px;
+               text-transform: uppercase;
+          }
+     
+          .mobile .project-details .text-container p {
+               /* color: black; */
+               font-size: 12px;
+               margin-bottom: 25px;
+          }
+     
+          .mobile .project-details .text-container p a {
+               color: var(--primary-color);
+          }
+     
+          .mobile .project-details .text-container .links {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+     
+          .mobile .project-details .text-container a {
+               text-decoration: none;
+               color: white;
+          }
+     
+          .mobile .project-details .text-container a:hover i {
+               color: var(--primary-color);
+          }
+     
+          .mobile .project-details .text-container a i {
+               font-size: 20px;
+               /* color: black; */
+          }
+     
+          .mobile .project-details>a {
+               text-decoration: none;
+               cursor: pointer;
+               color: white;
+               font-size: 12px;
+          }
+     
+          .mobile .project-details>a:hover {
+               color: var(--primary-color);
+          }
 
      /* CONTACT */
      .mobile .contact {
@@ -674,8 +851,8 @@ body{
      .mobile .contact-links .social-media-icons img {
           width: 45px;
      }
-     .mobile section.contact .contact-info form {
-          margin-bottom: 50px;
+     .mobile .contact .contact-info form {
+          margin-bottom: 25px;
      }
      .mobile form input,
      .mobile form textarea {
