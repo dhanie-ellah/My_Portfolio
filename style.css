@@ -4,6 +4,7 @@
      --blue-3: #0033ff;
      --primary-color: #B1CBF5;
      --dark: #181f2a;
+     --resume: #0e374e;
      }
 ::-webkit-scrollbar{
      width: 5px;
@@ -18,10 +19,12 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     font-family: "Montserrat";
+     font-family: "poppins";
 }
 a,button{
      cursor: pointer;
+     text-decoration: none;
+     color: white;
 }
 body{
      background-color: var(--dark);
@@ -122,6 +125,13 @@ body{
 .desktop .home {
      padding-left: 25%;
      color: white;
+     scroll-behavior: smooth;
+     scroll-snap-type: y mandatory;
+     overflow-y: scroll;
+     height: 100vh;
+}
+.desktop .home .page{
+     scroll-snap-align: start;
 }
 .desktop .home .home-wrapper{
      height: 100vh;
@@ -231,6 +241,68 @@ body{
      color: white;
 }
 
+/* RESUME */
+.resume{
+     padding: 25px;
+     padding-left: 27%;
+     color: black;
+}
+.resume .resume-content{
+     background-color: white;
+     padding: 25px;
+}
+.resume .resume-content .top{
+     background-color: var(--resume);
+     padding: 50px 25px;
+     text-align: center;
+     margin-bottom: 15px;
+     color: white;
+}
+.resume .resume-content .top .links{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 15px;
+     margin: 25px 0 0
+}
+.resume .resume-content .top .links .link{
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     font-size: 12px;
+}
+.resume .resume-content .top .links .link i{
+     color: var(--primary-color);
+}
+.resume .resume-content .bottom h4{
+     text-align: center;
+     background-color: rgba(225, 225, 225, 0.45);
+     backdrop-filter: blur(15px);
+     margin: 15px 0;
+     color: black;
+}
+.resume .resume-content .bottom .profile p,
+.resume .resume-content .bottom .technologies p,
+.resume .resume-content .bottom .tools p,
+.resume .resume-content .bottom .skills p{
+     font-size: 12px;
+}
+.resume .resume-content .bottom .experience{
+     margin-bottom: 15px;
+}
+.resume .resume-content .bottom .experience .details{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 12px;
+     padding-bottom: 15px;
+}
+.resume .resume-content .bottom .experience .role{
+     padding-left: 5%;
+     font-size: 12px;
+}
+
 /* PROJECTS */
 .desktop .project {
      padding: 50px 0;
@@ -271,6 +343,7 @@ body{
      height: 250px;
      border-radius: 10px;
      overflow: hidden;
+     cursor: pointer;
 }
 .desktop .project-details .fylo {
      background: url(./images/fylo\ dark\ theme\ landing\ page.jpg) no-repeat center;
@@ -296,43 +369,6 @@ body{
      background: url(./images/church.png) no-repeat center;
      background-size: cover;
 }
-/* .desktop .project-details .projects-outlined .text-container{
-     display: none;
-     transition: ease-in-out 0.3s;
-}
-.desktop .project-details .projects-outlined:hover .text-container{
-     display: block;
-} */
-/* .desktop .project-details .projects-outlined a {
-     text-decoration: none;
-     width: 100%;
-}
-
-.desktop .project-details .image-container {
-     width: 100%;
-     margin: 0;
-     overflow: hidden;
-}
-
-.desktop .project-details .image-container img {
-     width: 100%;
-}
-
-.desktop .project-details .projects-outlined:hover .image-container img {
-     animation: scale 1s ease-in-out;
-     animation-fill-mode: forwards;
-}
-
-@keyframes scale {
-     from {
-          transform: scale(1);
-     }
-
-     to {
-          transform: scale(1.25);
-     }
-} */
-
 .desktop .project-details .projects-outlined .text-container {
      display: none;
      width: 100%;
@@ -477,6 +513,7 @@ body{
      margin-bottom: 15px;
      outline: none;
      resize: none;
+     color: white;
 }
 .desktop form input::placeholder,
 .desktop form textarea::placeholder{
@@ -678,6 +715,15 @@ body{
                color: white;
           }
 
+          /* RESUME */
+          .resume{
+               padding: 0;
+               padding-bottom: 25%;
+          }
+          .resume .resume-content{
+               padding: 10px;
+          }
+
           /* PROJECTS */
           .mobile .project {
                color: white;
@@ -862,6 +908,7 @@ body{
           border-radius: 10px;
           padding: 12px;
           margin-bottom: 15px;
+          color: white;
      }
      .mobile form input[type="submit"] {
           background-color: white;
