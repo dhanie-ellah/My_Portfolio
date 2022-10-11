@@ -165,12 +165,12 @@
                                    </div>
                               </div>
                
-                              <form action="https://formsubmit.co/0bf936fdb1d89ea88306bf015a57ad8f" method="post" name="contact">
-                                   <input type="text" placeholder="Fullname" name="fullname">
-                                   <input type="tel" placeholder="Phone number" name="number">
-                                   <input type="email" placeholder="Email Address" name="email">
-                                   <textarea placeholder="Message" rows="5" name="message"></textarea> <br>
-                                   <input type="submit" value="Submit">
+                              <form name="contact" method="POST" data-netlify="true">
+                                   <input type="text" placeholder="Fullname" name="fullname" class="input">
+                                   <input type="tel" placeholder="Phone number" name="number" class="input">
+                                   <input type="email" placeholder="Email Address" name="email" class="input">
+                                   <textarea placeholder="Message" rows="5" name="message" class="input"></textarea> <br>
+                                   <input type="submit" value="Submit" class="submit">
                               </form>
                          </div>
                          <p>Coded with <i class='bx bxs-heart' style='color:#ff0000'></i> by <a href="https://github.com/dhanie-ellah" target="_blank">Braide Daniella Biobele</a>
@@ -261,13 +261,26 @@
 
           <div class="contact">
                <div class="contact-info">
-                    <form action="https://formsubmit.co/0bf936fdb1d89ea88306bf015a57ad8f" method="post" name="contact">
-                         <input type="text" placeholder="Fullname" name="fullname">
-                         <input type="tel" placeholder="Phone number" name="number">
-                         <input type="email" placeholder="Email Address" name="email">
-                         <textarea placeholder="Message" rows="5" name="message"></textarea> <br>
-                         <input type="submit" value="Submit">
+                    <form name="contact" method="POST" data-netlify="true">
+                         <input type="text" placeholder="Fullname" name="fullname" class="input">
+                         <input type="tel" placeholder="Phone number" name="number" class="input">
+                         <input type="email" placeholder="Email Address" name="email" class="input">
+                         <textarea placeholder="Message" rows="5" name="message" class="input"></textarea> <br>
+                         <input type="submit" value="Submit" class="submit">
                     </form>
+               </div>
+          </div>
+     </div>
+
+     <div class="modal">
+          <div class="modal-content">
+               <!-- <i class='bx bx-x'></i> -->
+               <div class="content">
+                    <img src="./images/successfully-done.gif" alt="">
+               </div>
+               <h1>SUCCESSFUL</h1>
+               <div class="btn">
+                    <button class="modal-btn">Continue</button>
                </div>
           </div>
      </div>
