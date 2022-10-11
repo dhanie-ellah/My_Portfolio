@@ -2,13 +2,14 @@ const submitBtns = document.querySelectorAll(".submit");
 const inputs = document.querySelectorAll(".input");
 const modal = document.querySelectorAll(".modal");
 const modalBtn = document.querySelectorAll(".modal-btn");
+const forms = document.querySelectorAll(".form")
 
-submitBtns.forEach(submitBtn => {
-     submitBtn.addEventListener("click", (e) => {
+forms.forEach(form => {
+     form.addEventListener("submit", (e) => {
           e.preventDefault();
           inputs.forEach(input => {
                if (input.value = "") {
-                    input.style.border = "1px solid red"
+                    input.style.borderColor = "red"
                } else {
                     modal.forEach((modal) => {
                          modal.style.display = "flex";

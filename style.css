@@ -428,6 +428,7 @@ body{
 }
 
 .desktop .contact {
+     height: 100vh;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -570,7 +571,7 @@ body{
 }
 .modal .content{
      width: 100%;
-     height: 200px;
+     height: 150px;
      border-radius: 50%;
      overflow: hidden;
      display: flex;
@@ -619,6 +620,16 @@ body{
      .desktop aside .contact-links .email-wrapper a,
      .desktop nav a p {
           font-size: 11px;
+     }
+     .desktop .home-content{
+          flex-direction: column-reverse;
+     }
+     .desktop .home-text-wrapper {
+          width: 100%;
+          text-align: center;
+     }
+     .desktop .home-text-wrapper .home-text h2{
+          font-size: 35px;
      }
      .desktop .home .about-content,
      .desktop .home .skillset{
