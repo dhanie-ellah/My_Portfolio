@@ -187,10 +187,13 @@ body{
      align-items: center;
      justify-content: center;
      height: 100vh;
-     margin-bottom: 100px;
+}
+.desktop .home .flex-content{
+     padding: 10px;
+     display: flex;
 }
 .desktop .home .about-content{
-     width: 70%;
+     width: 50%;
 }
 .desktop .home .about-content .about-header {
      display: flex;
@@ -221,17 +224,19 @@ body{
 
 /* SKILLS/TECHNOLOGIES */
 .desktop .home .skillset{
-     width: 30%;
+     width: 50%;
 }
-.desktop .home .skillset h4{
+.desktop .home .skillset h1{
      text-align: center;
      margin: 20px;
      text-transform: uppercase;
+     color: var(--primary-color);
 }
 .desktop .home .skillset .skills{
      display: flex;
-     gap: 10px;
-     justify-content: center;
+     flex-wrap: wrap;
+     gap: 15px;
+     /* justify-content: center; */
 }
 .desktop .home .skillset .skills i{
      font-size: 40px;
@@ -239,6 +244,12 @@ body{
 }
 .desktop .home .skillset .skills i:hover{
      color: white;
+}
+.desktop .home .skillset .skills p{
+     background-color: rgba(177, 203, 245, 0.75);
+     padding: 5px 8px;
+     color: black;
+     border-radius: 5px;
 }
 
 /* RESUME */
@@ -280,7 +291,7 @@ body{
      background-color: rgba(225, 225, 225, 0.45);
      backdrop-filter: blur(15px);
      margin: 15px 0;
-     color: black;
+     color: var(--resume);
 }
 .resume .resume-content .bottom .profile p,
 .resume .resume-content .bottom .technologies p,
@@ -338,7 +349,6 @@ body{
 }
 
 .desktop .project-details .projects-outlined {
-     margin-bottom: 25px;
      width: 250px;
      height: 250px;
      border-radius: 10px;
@@ -346,7 +356,7 @@ body{
      cursor: pointer;
 }
 .desktop .project-details .fylo {
-     background: url(./images/fylo\ dark\ theme\ landing\ page.jpg) no-repeat center;
+     background: url(images/fylo.png) no-repeat center;
      background-size: cover;
 }
 .desktop .project-details .harvoxx {
@@ -354,11 +364,11 @@ body{
      background-size: cover;
 }
 .desktop .project-details .crappo {
-     background: url(./images/CRAPPO.png) no-repeat center;
+     background: url(./images/crappo.png) no-repeat center;
      background-size: cover;
 }
 .desktop .project-details .rating {
-     background: url(./images/rating-component.png) no-repeat center;
+     background: url(./images/rating.png) no-repeat center;
      background-size: cover;
 }
 .desktop .project-details .form {
@@ -757,12 +767,8 @@ body{
      }
 
           /* SKILLS/TECHNOLOGIES */
-          .mobile .skillset h4 {
-               font-size: 15px;
-               color: white;
-          }
-     
-          .mobile .skillset h4 {
+          .mobile .skillset h1 {
+               color: var(--primary-color);
                text-align: center;
                margin: 20px;
                text-transform: uppercase;
@@ -770,6 +776,7 @@ body{
      
           .mobile .skillset .skills {
                display: flex;
+               flex-wrap: wrap;
                gap: 10px;
                justify-content: center;
           }
@@ -782,6 +789,12 @@ body{
           .mobile .skillset .skills i:hover {
                color: white;
           }
+          .mobile .skillset .skills p {
+               background-color: rgba(177, 203, 245, 0.75);
+               padding: 5px 8px;
+               color: black;
+               border-radius: 5px;
+          }
 
           /* RESUME */
           .resume{
@@ -790,6 +803,9 @@ body{
           }
           .resume .resume-content{
                padding: 10px;
+          }
+          .resume .resume-content .bottom .experience .details{
+               gap: 15px;
           }
 
           /* PROJECTS */
@@ -813,7 +829,7 @@ body{
           }
      
           .mobile .project-details .fylo {
-               background: url(./images/fylo\ dark\ theme\ landing\ page.jpg) no-repeat center;
+               background: url(./images/fylo.png) no-repeat center;
                background-size: cover;
           }
      
@@ -823,12 +839,12 @@ body{
           }
      
           .mobile .project-details .crappo {
-               background: url(./images/CRAPPO.png) no-repeat center;
+               background: url(./images/crappo.png) no-repeat center;
                background-size: cover;
           }
      
           .mobile .project-details .rating {
-               background: url(./images/rating-component.png) no-repeat center;
+               background: url(./images/rating.png) no-repeat center;
                background-size: cover;
           }
      
