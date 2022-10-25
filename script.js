@@ -9,6 +9,7 @@ forms.forEach((form) => {
     inputs.forEach((input) => {
       if (input.value == "") {
         input.style.borderColor = "red";
+        e.preventDefault()
       }
       input.addEventListener('keyup', () => {
         input.style.borderColor = "white"
