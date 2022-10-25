@@ -598,7 +598,7 @@ body{
      display: flex;
      justify-content: center;
 }
-.modal .modal-content button{
+.modal .modal-content a{
      background-color: transparent;
      border: .5px solid black;
      color: black;
@@ -607,7 +607,7 @@ body{
      text-align: center;
      border-radius: 10px;
 }
-.modal .modal-content button:hover{
+.modal .modal-content a:hover{
      opacity: .5;
 }
 
