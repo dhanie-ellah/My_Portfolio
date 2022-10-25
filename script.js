@@ -6,7 +6,7 @@ const forms = document.querySelectorAll(".form");
 
 forms.forEach((form) => {
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     inputs.forEach((input) => {
       if (input.value == "") {
         input.style.borderColor = "red";
