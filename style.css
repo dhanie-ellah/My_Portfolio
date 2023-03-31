@@ -827,7 +827,7 @@ body{
           .mobile .project-details .projects-outlined {
                margin-bottom: 45px;
                /* width: 350px; */
-               height: 250px;
+               height: 300px;
                border-radius: 10px;
                overflow: hidden;
           }
