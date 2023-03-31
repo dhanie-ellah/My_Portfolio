@@ -36,7 +36,7 @@ body{
      display: flex;
      width: 100%;
      min-height: 100vh;
-     /* background: rgba(0, 0, 0, 0.25) url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-54587.jpg?w=740&t=st=1665221064~exp=1665221664~hmac=d747bf575dd270c18f298415b47e235c6ad25c8b9ffed3b49492a34c1455eef5) no-repeat center;
+     /* background: rgba(0, 0, 0, 0.25) url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-54587.png?w=740&t=st=1665221064~exp=1665221664~hmac=d747bf575dd270c18f298415b47e235c6ad25c8b9ffed3b49492a34c1455eef5) no-repeat center;
      background-size: cover; */
 }
 .desktop .side-nav{
@@ -371,8 +371,8 @@ body{
      background: url(./images/rating.png) no-repeat center;
      background-size: cover;
 }
-.desktop .project-details .form {
-     background: url(./images/form.png) no-repeat center;
+.desktop .project-details .k-reader {
+     background: url(./images/K-reader.png) no-repeat center;
      background-size: cover;
 }
 .desktop .project-details .church {
@@ -852,8 +852,8 @@ body{
                background-size: cover;
           }
      
-          .mobile .project-details .form {
-               background: url(./images/form.png) no-repeat center;
+          .mobile .project-details .k-reader {
+               background: url(./images/k-reader.png) no-repeat center;
                background-size: cover;
           }
      
